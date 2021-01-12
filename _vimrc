@@ -1,7 +1,7 @@
 "插件配置
 set nocompatible  "不兼容vi
 set encoding=utf-8 "编码设为utf-8
-set fileencodings=ucs-bom,utf-8.cp936,gb18030,big5,eus-jp,euc-kr,latin1 "文件编码依次尝试格式
+set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,eus-jp,euc-kr,latin1 "文件编码依次尝试格式
 set t_Co=256  "256色
 filetype indent on  "文件类型检查，为适当的类型进行适当的缩进
 
