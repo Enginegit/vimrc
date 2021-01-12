@@ -46,6 +46,6 @@ noremap <leader>sp :let g:netrw_browse_split=1<CR>
 noremap <leader>vs :let g:netrw_browse_split=2<CR>
 
 "用gcc编译运行
-noremap <leader>r :!gcc -g % -o %:r && %:r<CR>
+noremap <leader>r :!gcc -g % -o %:r && ./%:r<CR>
 "用gdb调试
-noremap <leader>g :!gdb %:r<CR>
+noremap <leader>g :!gdb ./%:r<CR>
