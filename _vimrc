@@ -1,40 +1,46 @@
-"²å¼şÅäÖÃ
-set nocompatible  "²»¼æÈİvi
-set encoding=utf-8 "ÉèÖÃ±àÂëÎªutf-8
-set t_Co=256  "256É«
-filetype indent on  "ÎÄ¼şÀàĞÍ¼ì²é£¬ÎªÊÊµ±µÄÀàĞÍ½øĞĞÊÊµ±µÄËõ½ø
+"æ’ä»¶é…ç½®
+set nocompatible  "ä¸å…¼å®¹vi
+set encoding=utf-8 "ç¼–ç è®¾ä¸ºutf-8
+set fileencodings=ucs-bom,utf-8.cp936,gb18030,big5,eus-jp,euc-kr,latin1 "æ–‡ä»¶ç¼–ç ä¾æ¬¡å°è¯•æ ¼å¼
+set t_Co=256  "256è‰²
+filetype indent on  "æ–‡ä»¶ç±»å‹æ£€æŸ¥ï¼Œä¸ºé€‚å½“çš„ç±»å‹è¿›è¡Œé€‚å½“çš„ç¼©è¿›
 
-"²à±ß
+"ä¾§è¾¹
 set nu
 set relativenumber
 
-"ÃÀ»¯
+"ç¾åŒ–
 set cursorline
 
-"×´Ì¬À¸
+"çŠ¶æ€æ 
 set showcmd
 set showmode
 set laststatus=2
 
-"Óï·¨¸ßÁÁ
+"è¯­æ³•é«˜äº®
 syntax on
 set showmatch
 
-"ËÑË÷
+"æœç´¢
 set incsearch
 
-"°´¼üÓ³Éä
+"æŒ‰é”®æ˜ å°„
 noremap J 5j
 noremap K 5k
 noremap _ J
 let mapleader="\<space>"
-map <leader>s :source $MYVIMRC<CR>
-"×Ô¶¯µ÷½Ú´°¿Ú
+map <leader>so :source $MYVIMRC<CR>
+"è‡ªåŠ¨è°ƒèŠ‚çª—å£
 map <up> :res +5<CR>
 map <down> :res -5<CR>
 map <left> :vertical res -5<CR>
 map <right> :vertical res +5<CR>
 
-
-"Ö÷Ìâ
+"ä¸»é¢˜
 colorscheme koehler
+
+"netrw
+"å‚ç›´åˆ’åˆ†
+map <leader>sp :let g:netrw_browse_split=1<CR>
+"æ°´å¹³åˆ’åˆ†
+map<leader>vs :let g:netrw_browse_split=2<CR>
