@@ -49,3 +49,7 @@ noremap <leader>vs :let g:netrw_browse_split=2<CR>
 noremap <leader>r :!gcc -g % -o %:r && %:r<CR>
 "编译调试
 noremap <leader>g :!gcc -g % -o %:r && gdb %:r<CR>
+
+"termdebug
+:packadd termdebug
+noremap <leader>G :!gcc -g % -o %:r<CR>:Termdebug %:r<CR>
