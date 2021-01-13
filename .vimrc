@@ -11,6 +11,8 @@ set relativenumber
 
 "美化
 set cursorline
+"主题
+colorscheme koehler
 
 "状态栏
 set showcmd
@@ -36,13 +38,13 @@ noremap <down> :res -5<CR>
 noremap <left> :vertical res -5<CR>
 noremap <right> :vertical res +5<CR>
 
-"主题
-colorscheme koehler
-
 "编译运行
 noremap <leader>r :!gcc -g % -o %:r && ./%:r<CR>
 "编译调试
 noremap <leader>g :!gcc -g % -o %:r && gdb ./%:r<CR>
+"termdebug
+:packadd termdebug
+noremap <leader>G :!gcc -g % -o %:r<CR>:Termdebug %:r<CR>
 
 "netrw
 let g:netrw_liststyle=3
@@ -58,10 +60,6 @@ noremap <leader>vs :let g:netrw_browse_split=2<CR>
 noremap <leader>ne :let g:netrw_browse_split=3<CR>
 "在前一个窗口打开
 noremap <leader>la :let g:netrw_browse_split=4<CR>
-
-"termdebug
-:packadd termdebug
-noremap <leader>G :!gcc -g % -o %:r<CR>:Termdebug %:r<CR>
 
 "窗口转换
 noremap <leader>h <C-w>h
