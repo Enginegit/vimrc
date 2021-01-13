@@ -48,4 +48,4 @@ noremap <leader>vs :let g:netrw_browse_split=2<CR>
 "用gcc编译运行
 noremap <leader>r :!gcc -g % -o %:r && ./%:r<CR>
 "用gdb调试
-noremap <leader>g :!gdb ./%:r<CR>
+noremap <leader>g :!gcc -g % -o %:r && gdb ./%:r<CR>
