@@ -45,7 +45,11 @@ noremap <leader>sp :let g:netrw_browse_split=1<CR>
 "水平划分
 noremap <leader>vs :let g:netrw_browse_split=2<CR>
 
-"用gcc编译运行
+"编译运行
 noremap <leader>r :!gcc -g % -o %:r && ./%:r<CR>
-"用gdb调试
+"编译调试
 noremap <leader>g :!gcc -g % -o %:r && gdb ./%:r<CR>
+
+"termdebug
+:packadd termdebug
+noremap <leader>G :!gcc -g % -o %:r<CR>:Termdebug %:r<CR>
