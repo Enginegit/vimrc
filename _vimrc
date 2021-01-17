@@ -45,24 +45,3 @@ noremap <leader>g :!gcc -g % -o %:r && gdb %:r<CR>
 "termdebug
 :packadd termdebug
 noremap <leader>G :!gcc -g % -o %:r<CR>:Termdebug %:r<CR>
-
-"netrw
-let g:netrw_liststyle=3
-noremap <leader>v :let g:netrw_winsize=50<CR>:let g:netrw_browse_split=0<CR>:Vex<CR>
-noremap <leader>V :let g:netrw_winsize=15<CR>:let g:netrw_browse_split=4<CR>:Vex<CR>
-"在当前窗口打开
-noremap <leader>lo :let g:netrw_browse_split=0<CR>
-"垂直划分
-noremap <leader>sp :let g:netrw_browse_split=1<CR>
-"水平划分
-noremap <leader>vs :let g:netrw_browse_split=2<CR>
-"新建标签页打开
-noremap <leader>ne :let g:netrw_browse_split=3<CR>
-"在前一个窗口打开
-noremap <leader>la :let g:netrw_browse_split=4<CR>
-
-"窗口转换
-noremap <leader>h <C-w>h
-noremap <leader>j <C-w>j
-noremap <leader>k <C-w>k
-noremap <leader>l <C-w>l
