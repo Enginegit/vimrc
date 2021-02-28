@@ -8,12 +8,14 @@ set cursorline
 "插件配置
 set nocompatible  "不兼容vi
 set t_Co=256  "256色
-filetype plugin indent on  "文件类型检查，为适当的类型进行适当的缩进
-"call plug#begin('~/vimfiles/plugged')
-"Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
+filetype off
+call plug#begin('~/vimfiles/plugged')
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown'}
 "Plug 'ycm-core/YouCompleteMe'
-"call plug#end()
-"let g:instant_markdown_browser="chrome"
+call plug#end()
+filetype plugin indent on  "文件类型检查，为适当的类型进行适当的缩进
+let g:instant_markdown_browser="chrome"
+"let g:ycm_global_ycm_extra_conf='~/vimfiles/plugged/YouCompleteMe/.ycm_extra_conf.py'
 
 "输入法
 "set noimdisable
@@ -24,6 +26,7 @@ set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,eus-jp,euc-kr,latin1 "文件�
 
 "缩进
 set tabstop=4
+set shiftwidth=4
 set autoindent
 
 "侧边
@@ -37,6 +40,7 @@ colorscheme koehler
 set showcmd
 set showmode
 set laststatus=2
+set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c,%V%)\ %P
 
 "语法高亮
 syntax on
@@ -46,8 +50,12 @@ set showmatch
 set incsearch
 
 "按键映射
+let mapleader = "\<space>"
 noremap <leader>so :source $MYVIMRC<CR>
 noremap <leader>si :tabe ~/_vimrc<CR>
+noremap <leader>xx :%!xxd<CR>
+noremap <leader>xr :%!xxd<space>-r<CR>
+
 "自动调节窗口
 noremap <up> :res +5<CR>
 noremap <down> :res -5<CR>
@@ -63,17 +71,10 @@ noremap <leader>g :!gcc -g % -o %:r && gdb %:r<CR>
 :packadd termdebug
 noremap <leader>G :!gcc -g % -o %:r<CR>:Termdebug %:r<CR>
 
-"path
+"环境变量path
 :set path+=~/py/**
 :set path+=~/js/**
 :set path+=~/md/**
+:set path+=~/c/**
 :set path+=~/source/repos/**
 :set path+=~/vimfiles/**
-
-"markdown
-"imap <C-I> ******<C-o>3h
-"imap <C-b> ****<C-o>2h
-"imap <C-i> **<C-o>h
-"imap <C-u> <u></u><C-o>4h
-"imap <C-~> ``<C-o>h
-"imap <C-k> []()<C-o>3h
