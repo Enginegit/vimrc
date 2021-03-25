@@ -8,6 +8,11 @@ set cursorline
 "输入法
 "set noimdisable
 
+"大小写
+"ignore case
+"set noic
+"set ic
+
 "编码
 set encoding=utf-8 "编码设为utf-8
 set fileencodings=ucs-bom,utf-8,cp936,gb18030,big5,eus-jp,euc-kr,latin1 "文件编码依次尝试格式
@@ -57,3 +62,9 @@ noremap <leader>g :!gcc -g % -o %:r && gdb ./%:r<CR>
 "termdebug
 :packadd termdebug
 noremap <leader>G :!gcc -g % -o %:r<CR>:Termdebug %:r<CR>
+"引号补全
+"inoremap [ []<esc>i
+"inoremap < <><esc>i
+"inoremap " ""<esc>i
+"inoremap ' ''<esc>i
+"inoremap { {}<esc>i
