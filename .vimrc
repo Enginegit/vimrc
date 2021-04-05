@@ -68,3 +68,8 @@ noremap <leader>G :!gcc -g % -o %:r<CR>:Termdebug %:r<CR>
 "inoremap " ""<esc>i
 "inoremap ' ''<esc>i
 "inoremap { {}<esc>i
+
+set clipboard=unnamed
+
+noremap <C-j> gj
+noremap <C-k> gk
