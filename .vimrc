@@ -73,3 +73,6 @@ set clipboard=unnamed
 
 noremap <C-j> gj
 noremap <C-k> gk
+
+"ctags
+noremap <leader>t :!ctags -R .<CR><CR>
