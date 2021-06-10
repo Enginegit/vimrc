@@ -5,6 +5,10 @@ noremap _ J
 cmap W w
 set cursorline
 
+"显示隐藏字符
+"set list
+"不显示隐藏字符
+"set nolist
 "输入法
 "set noimdisable
 
@@ -24,7 +28,7 @@ set autoindent
 
 "侧边
 set nu
-set relativenumber
+"set relativenumber
 
 "主题
 colorscheme koehler
@@ -55,7 +59,12 @@ noremap <left> :vertical res -5<CR>
 noremap <right> :vertical res +5<CR>
 
 "编译运行
-noremap <leader>r :!gcc -g % -o %:r && ./%:r<CR>
+"pthread
+noremap <leader>1 :!clear && gcc -g % -o %:r -pthread && ./%:r<CR>
+noremap <leader>2 :!clear && gcc -g % -o %:r -pthread && gdb %:r<CR>
+
+noremap <leader>r :!clear && gcc -g % -o %:r && ./%:r<CR>
+noremap <leader>R :!clear && gcc -g % -o %:r && ./%:r > temp && less temp<CR>
 noremap <leader>p :!python %:r.py<CR>
 "编译调试
 noremap <leader>g :!gcc -g % -o %:r && gdb ./%:r<CR>
@@ -68,11 +77,6 @@ noremap <leader>G :!gcc -g % -o %:r<CR>:Termdebug %:r<CR>
 "inoremap " ""<esc>i
 "inoremap ' ''<esc>i
 "inoremap { {}<esc>i
-
-set clipboard=unnamed
-
-noremap <C-j> gj
-noremap <C-k> gk
 
 "ctags
 noremap <leader>t :!ctags -R .<CR><CR>
