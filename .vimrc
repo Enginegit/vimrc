@@ -1,6 +1,6 @@
 "必要配置
-noremap J 5j
-noremap K 5k
+noremap J 3j
+noremap K 3k
 noremap _ J
 cmap W w
 set cursorline
@@ -53,10 +53,12 @@ noremap <leader>xx :%!xxd<CR>
 noremap <leader>xr :%!xxd<space>-r<CR>
 
 "自动调节窗口
-noremap <up> :res +5<CR>
-noremap <down> :res -5<CR>
-noremap <left> :vertical res -5<CR>
-noremap <right> :vertical res +5<CR>
+"noremap <up> :res +5<CR>
+"noremap <down> :res -5<CR>
+"noremap <left> :vertical res -5<CR>
+"noremap <right> :vertical res +5<CR>
+noremap <up> <C-y>
+noremap <down> <C-e>
 
 "编译运行
 "pthread
